@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="1" errors="1" failures="0" skip="0"><testcase classname="nose.failure.Failure" name="runTest" time="0.001"><error type="exceptions.ImportError" message="No module named nosetests"><![CDATA[Traceback (most recent call last):
+  File "/usr/local/Cellar/python/2.7.14_3/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/devops_automation/cd-docker-ansible/todobackend/venv/lib/python2.7/site-packages/nose/loader.py", line 407, in loadTestsFromName
+    module = resolve_name(addr.module)
+  File "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/devops_automation/cd-docker-ansible/todobackend/venv/lib/python2.7/site-packages/nose/util.py", line 312, in resolve_name
+    module = __import__('.'.join(parts_copy))
+ImportError: No module named nosetests
+]]></error></testcase></testsuite>
