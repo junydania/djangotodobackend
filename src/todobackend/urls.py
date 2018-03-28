@@ -1,5 +1,4 @@
 """todobackend URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
 Examples:
@@ -21,5 +20,3 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('todo.urls')),
 ]
-
-
