@@ -11,9 +11,15 @@ DEV_PROJECT := $(REL_PROJECT)dev
 .PHONY: test build release clean
 
 test: 
+	${INFO} "building images..."
 	@ docker-compose -p $(DEV_PROJECT) -f $(DEV_COMPOSE_FILE) build
+	${INFO} "Ensure database is ready...."
 	@ docker-compose -p $(DEV_PROJECT) -f $(DEV_COMPOSE_FILE) up agent
+	${INFO} "Running tests..."
 	@ docker-compose -p $(DEV_PROJECT) -f $(DEV_COMPOSE_FILE) up test
+	@ docker cp $$(docker-compose -p $(DEV_PROJECT) -f $(DEV_COMPOSE_FILE) ps -q test):/reports/. reports
+	${INFO} "Testing complete"
+
 
 build:
 	${INFO} "Building application artifacts..."
