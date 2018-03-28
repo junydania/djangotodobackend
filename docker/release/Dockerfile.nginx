@@ -1,0 +1,4 @@
+FROM nginx
+MAINTAINER Osegbemoh Dania <o.dania@aol.com>
+
+COPY todobackend.conf /etc/nginx/conf.d/todobackend.conf
